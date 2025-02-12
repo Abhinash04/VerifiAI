@@ -1,6 +1,6 @@
 import "react"; 
 import vid1 from "../assets/placeholder.mp4";
-import Upload from "./upload";
+import Upload from "./Upload.jsx";
 
 const Section1 = () => {
     return (
