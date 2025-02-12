@@ -1,13 +1,13 @@
 import "react"; 
 import vid1 from "../assets/placeholder.mp4";
 import Upload from "./Upload.jsx";
+import { FaLock } from "react-icons/fa"
 
 const Section1 = () => {
     return (
-        <div className="bg-gradient-to-b from-[#E0EAF3] relative to-[#CFDEF3]">
-            <section className="relative lg:min-h-[1000px] pt-24 pb-10 sm:pt-32 sm:pb-16 lg:pb-24 flex flex-col lg:flex-row items-center lg:items-start max-w-[90%] mx-auto">
+        <div className="bg-gradient-to-b from-[#E0EAF3] relative to-[#CFDEF3]" id="section1">
+            <section className="relative lg:min-h-screen pt-24 pb-10 sm:pt-32 sm:pb-16 lg:pb-24 flex flex-col lg:flex-row items-center lg:items-start max-w-[90%] mx-auto">
 
-                
                 {/* Left Content */}
                 <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 relative z-20 lg:w-1/2 flex flex-col items-start text-left">
                     <h3 className="text-blue-500 font-semibold uppercase text-sm">VERIFIAI</h3>
@@ -20,16 +20,6 @@ const Section1 = () => {
 
                     {/* Upload Box */}
                     <div className="flex items-center gap-4 mt-6">
-                        {/* <div className="p-6 border border-dashed border-gray-300 rounded-lg bg-white shadow-sm w-[250px]">
-                            <p className="text-gray-500">Drop your video/docx here or choose a file.</p>
-                            <p className="text-gray-400 text-sm">MP4, PDF & DOCX only. Max 10MB file size.</p>
-                            <button className="mt-4 px-6 py-3 bg-green-500 text-white font-medium rounded-lg hover:bg-green-600">
-                                Upload Your Video/Docx
-                            </button>
-                            <p className="text-gray-500 text-sm mt-2 flex items-center">
-                                <span className="mr-2">🔒</span> Privacy guaranteed
-                            </p>
-                        </div> */}
                         <Upload />
 
                         {/* Add to Chrome Button */}
@@ -65,11 +55,9 @@ const Section1 = () => {
                                 ),
                             },
                             {
-                                text: "Secured & safe online payment",
+                                text: "Secured & Safe ",
                                 icon: (
-                                    <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M17 11H3C1.89543 11 1 11.8954 1 13V21C1 22.1046 1.89543 23 3 23H17C18.1046 23 19 22.1046 19 21V13C19 11.8954 18.1046 11 17 11Z" stroke="black" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
-                                    </svg>
+                                    <FaLock />
                                 ),
                             }
                         ].map((item, index) => (
