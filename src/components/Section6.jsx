@@ -56,15 +56,16 @@ function Section6() {
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className={`cursor-pointer rounded-md border $ border-blue-700 shadow-lg transition-all duration-200`}
+                className={`cursor-pointer rounded-md border $ border-white shadow-lg transition-all duration-200`}
                 style={{
-                  background: `${openFAQIndex === index ? "#0EA5E9" : ""}`,
+                  background: `${openFAQIndex === index ? "" : ""}`,
                 }}
               >
                 <button
                   type="button"
                   className="flex w-full items-center justify-between px-4 py-5 sm:p-6"
-                  onClick={() => toggleFAQ(index)}
+                  onMouseEnter={() => toggleFAQ(index)}
+                  onMouseLeave={() => setOpenFAQIndex(null)}
                   aria-expanded={openFAQIndex === index}
                 >
                   <span className="flex text-lg font-semibold text-grey-900">
@@ -114,7 +115,7 @@ function Section6() {
                         </span>
                       )}
                     </a>
-                    <p className="text-white">{faq.answer}</p>
+                    <p className="text-grey-900">{faq.answer}</p>
                   </div>
                 )}
               </div>
